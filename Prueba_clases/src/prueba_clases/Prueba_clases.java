@@ -50,7 +50,19 @@ public class Prueba_clases {
         
         float max = calcularMax(lista);
         System.out.println("El valor máximo de la lista es "+max);
-    }
+    */
+        }
+    
+     private static int calcNcifras( int num ){
+            int nCifras = 0;
+            
+            do{
+                num/=10;
+                nCifras++;
+            }while(num > 0);
+            
+            return nCifras;
+        }  
     
     public static float calcularMax( float[] lista ){
         float max = lista[0];
@@ -60,7 +72,7 @@ public class Prueba_clases {
         }
         
         return max;
-        */
+        
         //EJERCICIO 2
         
         System.out.println("Introduzca un entero cualquiera:");
@@ -74,7 +86,23 @@ public class Prueba_clases {
             lista[i]=nNum;  
         }
         System.out.println(lista);
-    }
+        */
+        int[] listaNum = separarCifras(1234);
         
-    
+        for(int cif:listaNum) System.out.println(cif+"");
+         
+            
+        
+        public static int[] separarCifras( int num){
+            int tope = calcNcifras(num);
+            
+            int[] lista = new int[tope];
+            
+            for(int i = tope-1; i >= 0; i++){
+                lista[i] = num%10;
+                num/=10;
+            }
+            return lista;
+        }
+    }
 }
