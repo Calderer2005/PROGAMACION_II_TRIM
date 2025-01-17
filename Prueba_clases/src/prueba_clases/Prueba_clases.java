@@ -50,7 +50,7 @@ public class Prueba_clases {
         
         float max = calcularMax(lista);
         System.out.println("El valor máximo de la lista es "+max);
-    */
+    
         }
     
      private static int calcNcifras( int num ){
@@ -86,7 +86,7 @@ public class Prueba_clases {
             lista[i]=nNum;  
         }
         System.out.println(lista);
-        */
+        
         int[] listaNum = separarCifras(1234);
         
         for(int cif:listaNum) System.out.println(cif+"");
@@ -98,11 +98,25 @@ public class Prueba_clases {
             
             int[] lista = new int[tope];
             
+            
             for(int i = tope-1; i >= 0; i++){
                 lista[i] = num%10;
                 num/=10;
             }
             return lista;
+        }*/
+        //Hay que darle un repaso porque hay cosas que sobran y que estan mal
+        //EJERCICO 3
+        int op = 0;
+        System.out.print("1]Factorial\n2]Potencia\n>");
+        op = sc.nextInt();
+        if(op==1){
+            
+        }else if(op==2){
+            
+        }else{
+            System.out.println("NO ES UNA DE LAS OPCIONES");
         }
+        
     }
 }
