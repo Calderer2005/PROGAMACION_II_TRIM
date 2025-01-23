@@ -16,7 +16,36 @@ public class Prueba_clases {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        /*
+        String pens = "¿Eres pensionista?";
+        String aut = "¿Eres autónomo";
+        String casado = "¿Estás casado?";
+        
+        if(leeOpcion2Alternativas(pens)){
+            
+        }
+                
+            
+       /* //Solicitar tamaño del arreglo
+        System.out.println("Introduce el tamaño del conjunto de enteros: ");
+        int size = sc.nextInt();
+        //Crear y llenar el arreglo
+        int[] numeros = new int[size];
+        System.out.println("Introduce los números del conjunto:");
+        for(int i = 0; i < size; i ++){
+            System.out.println("Número "+(i++)+": ");
+            numeros[i] = sc.nextInt();
+        }
+        //Solicitar el número a buscar
+        System.out.println("Introduce el número que deseas contar: ");
+        int numeroBuscado =sc.nextInt();
+        //LLamar al método y mostrar resultado
+        int apariciones = contarApariciones(numeros, numeroBuscado);
+        System.out.println("El número "+numeroBuscado+"aparece " + apariciones + " veces en el conjunto.");
+        
+        sc.close();
+        
+        
+        
         Perro p1 = new Perro("Toby","Golden Retriever",3,"Marrón");
         
         System.out.println(p1.raza);
@@ -64,7 +93,8 @@ public class Prueba_clases {
             return nCifras;
         }  
     
-    public static float calcularMax( float[] lista ){
+    
+        public static float calcularMax( float[] lista ){
         float max = lista[0];
         
         for(float num:lista){
@@ -107,6 +137,7 @@ public class Prueba_clases {
         }*/
         //Hay que darle un repaso porque hay cosas que sobran y que estan mal
         //EJERCICO 3
+        /*
         int op = 0;
         System.out.print("1]Factorial\n2]Potencia\n>");
         op = sc.nextInt();
@@ -117,6 +148,55 @@ public class Prueba_clases {
         }else{
             System.out.println("NO ES UNA DE LAS OPCIONES");
         }
+        */
         
+        
+    }
+    /*//EJ4
+    public static int fibonacci(int orden){
+            int fib1= 0;
+            int fib2= 1;
+            int aux = 0;
+            for(int i = 2; i <= orden; i++){
+                aux = fib1 + fib2;
+                fib1 = fib2;
+                fib2 = aux;
+            }
+            return aux;
+        }
+    public static int fibonacciR(int orden){
+        int fib = 0;
+            
+        if(orden < 1) fib = orden;
+        else fib = fibonacciR(orden-2) + fibonacciR(orden-1);
+                    
+        return fib;
+        
+    }
+    public static int contarApariciones(int[] conjunto,int numero){
+        int contador = 0;
+        for(int num : conjunto) {
+            if (num == numero) {
+                contador++;
+            }
+        }
+        return contador;
+    }*/
+    public static String leeOpcion2Alternativas(String mens){
+        Scanner sc = new Scanner(System.in);
+    
+    System.out.println(mens);
+    char resp = sc.next().toLowerCase().charAt(0);
+    
+    while(resp != 's' && resp!='n'){
+    resp =sc.next().toLowerCase().charAt(0);
+    }
+    
+    boolean res = false;
+    if(resp == 's') res = true;
+    
+    sc.close();
+    
+    return res;
     }
 }
