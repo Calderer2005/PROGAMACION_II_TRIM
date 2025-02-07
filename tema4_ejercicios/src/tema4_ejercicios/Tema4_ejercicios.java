@@ -17,7 +17,7 @@ public class Tema4_ejercicios {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        
+        /*
         //EJERCICIO 1
         
         System.out.print("Introduzca la longitud de la lista:\n>");
@@ -29,15 +29,62 @@ public class Tema4_ejercicios {
         
         for(int i = 0;i <arr.length; i++){
             arr[i] = sc.nextInt();
-            System.out.println(arr[i]);
-            
         }
         int max=0;
         max = valorMax(arr,max);
         
-        System.out.println(max);
+        System.out.println("El valor máximo es : "+max);
         
+        //EJERCICIO 2
+         
+        System.out.println("Introduza un número entero:");
+        int num = sc.nextInt();  
+    
+        int[] arr;
+        
+        arr = listaDig(num);
+        
+        for (int i = 0; i < arr.length; i++) {
+
+            System.out.println("Posición: "+i+" Valor: "+arr[i]);
+        }
+        */
+        //EJERCICIO 3
+        
+        System.out.println("Escoga una de las opciones :\n1]FACTORIAL\n2]POTENCIAL");
+        int option = sc.nextInt();
+        switch (option)
+        {
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            default:
+                System.out.println("\tNO ES UNA OPCIÓN");
+        }
     }
+    /*
+    public static int[] listaDig(int num){
+        int lg = 0;
+        int f = num;
+        int resto ;
+        
+        for (int i = 0 ;f>0; i++){
+            f = f/10;
+            lg++;
+        }
+        int arr[] = new int[lg];
+        for (int i = lg-1; i>= 0; i--) {
+            resto = num%10;
+            num = num/10;
+            arr[i] = resto;
+        }
+        
+        return arr;
+    }
+    
     public static int valorMax(int[] arr, int max){
         for(int i = 0; i<arr.length; i++){
             if(arr[i]>=max){
@@ -46,4 +93,8 @@ public class Tema4_ejercicios {
         }
         return max;
     }
-}
+    */
+    
+
+}   
+
