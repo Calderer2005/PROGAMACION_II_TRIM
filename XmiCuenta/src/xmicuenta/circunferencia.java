@@ -29,4 +29,8 @@ public class circunferencia {
     public void setradio(float r){
         radio = r;
     }
+    @Override
+    public String toString(){
+        return "La circunferencia tiene radio "+radio+" uds";
+    }
 }
